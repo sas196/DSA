@@ -10,7 +10,8 @@ public:
             
         }
         int i=1;
-        while(i){
+        while(i<=nums.size()){
+            
             if(pq[i]>0){
                 i++;
             }
