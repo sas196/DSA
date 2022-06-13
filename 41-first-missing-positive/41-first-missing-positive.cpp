@@ -1,11 +1,11 @@
 class Solution {
 public:
     int firstMissingPositive(vector<int>& nums) {
-       int n=nums.size();
+       int n=nums.size(),element,chair;
         for(int i=0;i<n;i++){
-            int element=nums[i];
+             element=nums[i];
             if(element>=1&&element<=n){
-             int chair=element-1;
+              chair=element-1;
              if(nums[chair]!=element){
                  swap(nums[chair],nums[i]);
                  i--;
