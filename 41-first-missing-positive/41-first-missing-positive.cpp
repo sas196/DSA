@@ -2,7 +2,7 @@ class Solution {
 public:
     int firstMissingPositive(vector<int>& nums) {
        int n=nums.size();
-        for(int i=0;i<nums.size();i++){
+        for(int i=0;i<n;i++){
             int element=nums[i];
             if(element>=1&&element<=n){
              int chair=element-1;
