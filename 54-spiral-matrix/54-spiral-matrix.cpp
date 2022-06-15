@@ -13,19 +13,19 @@ public:
             }
                 top++;
             }
-            if(dir==1){
+           else if(dir==1){
             for(int i=top;i<=bot;i++){
                 ans.push_back(matrix[i][right]);
             }
                 right--;
             }
-            if(dir==2){
+           else if(dir==2){
             for(int i=right;i>=left;i--){
                 ans.push_back(matrix[bot][i]);
             }
                 bot--;
             }
-            if(dir==3){
+           else if(dir==3){
             for(int i=bot;i>=top;i--){
                 ans.push_back(matrix[i][left]);
             }
