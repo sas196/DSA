@@ -7,10 +7,10 @@ public:
         pq[s]=1;
         for(int it:nums){
            s+=it;
-           
-            
+            if(pq.find(s-k)!=pq.end()){
                 c+=pq[s-k];
-                pq[s]++;
+            }
+            pq[s]++;
             
         }
         return c;
