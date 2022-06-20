@@ -6,28 +6,20 @@ public:
       }
       
       unordered_map<char,int>pq;
-      
-      int max=INT_MIN;
-      int c=0;
-      int m=0;
-      for(int i=0;i<s.length();i++){
-        pq[s[i]]++;
-        if(pq[s[i]]==1){
-          c++;
+        int i=0;
+        int j=0;
+        int count=0;
+        for(j;j<s.size();j++){
+            while(i<j&&pq.find(s[j])!=pq.end()){
+               pq.erase(s[i]);
+                i++;
+            }
+            pq[s[j]]++;
+            count=max(count,j-i+1);
+            
         }
-        else{
-          if(max<c)
-            max=c;
-          c=0;
-          pq.clear();
-          i=m++;
-        }
-      }
-      
-      max = max<c ?c :max;
-     
       
  
-   return max;
+   return count;
     }
 };
