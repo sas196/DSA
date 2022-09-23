@@ -4,7 +4,7 @@ public:
             int l=0,h=nums.size()-1;
             int n=nums.size();
             if(n==1)return nums[0];
-            while(l<=h){
+            while(l<h){
                     //if(l==h)return mid[l];
                     int mid=(h+l)/2;
                    // cout<<mid<<" ";
