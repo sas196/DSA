@@ -17,11 +17,11 @@ public:
                     if(nums[mid]==target)return mid;
                    
                     else if(nums[mid]>=nums[l]){
-                            if(target>=nums[l] and target<=nums[mid])return bs(nums,target,l,mid-1);
+                            if(target>=nums[l] and target<=nums[mid])h=mid-1;
                             else l=mid+1;
                     }
                     else if(nums[mid]<=nums[h]){
-                            if(target>=nums[mid] and target<=nums[h])return bs(nums,target,mid+1,h);
+                            if(target>=nums[mid] and target<=nums[h])l=mid+1;
                             else h=mid-1;
                             
                     }
