@@ -11,15 +11,6 @@ public:
             if(st2.size()>0 and it=='#')st2.pop();
             if(st2.size()>=0 and it!='#')st2.push(it);
         }
-        cout<<st1.size();
-        if(st1.size()!=st2.size())return false;
-        else{
-            while(st1.size()!=0){
-               if(st1.top()!=st2.top())return false;
-                st1.pop();
-                st2.pop();
-            }
-        }
-        return true;
+        return st1==st2;
     }
 };
