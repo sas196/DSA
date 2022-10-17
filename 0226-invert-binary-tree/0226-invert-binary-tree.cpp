@@ -13,7 +13,7 @@ class Solution {
 public:
     TreeNode* invertTree(TreeNode* root) {
         
-    if(root==nullptr)return nullptr;
+    if(root==nullptr or (root->left ==nullptr and root->right==nullptr))return root;
         TreeNode*temp1=invertTree(root->left);
         TreeNode*temp2=invertTree(root->right);
         root->left=temp2;
